@@ -1,0 +1,76 @@
+<form class="needs-validation" name="form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+<div class="bg-light">
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal text-success">Płatność</h5>
+  </div>
+
+  <div class="ml-3">
+    <p class="lead">
+      <span class="text-primary">Podsumowanie</span>
+      <span class="text-secondary"> | Płacisz za zamówienie w </span>
+      <span class="text-success">"NazwaRestauracji"</span>
+    </p>
+  </div>
+  <hr class="mb-4">
+  <div class="row ml-0 d-flex justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <h5 class="card-header">Twoje zamówienie
+          <span class="text-primary">(UserName)</span>
+        </h5>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">L.p. #</th>
+                <th scope="col">Zamówienie</th>
+                <th scope="col">Ilość porcji</th>
+                <th scope="col">Kwota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Kebab</td>
+                <td>2</td>
+                <td>30,00 PLN</td>
+              </tr>
+              <tr class="table-active">
+                <th scope="row"></th>
+                <td></td>
+                <td class="text-right text-secondary font-weight-bold">Suma</td>
+                <td>30,00 PLN</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 d-flex flex-column flex-md-row align-items-center">
+      <div class="card">
+        <h5 class="card-header">Sposób płatności</h5>
+        <div class="card-body">
+
+          <div *ngFor="let paymentOption of paymentOptions">
+            <input
+            ng-model="payment.sposób_zapłaty"
+            type="radio" 
+            name="paymentOption" 
+            value="{{paymentOption}}"
+            (change)="radioChangeHandler($event)">
+            <i class="ml-3">{{paymentOption}}</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row py-5 d-flex align-items-center flex-column justify-content-center">
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg px-5" type="submit" click="onSubmit()">Zapłać</button>
+  </div>
+
+</div>
+</form>

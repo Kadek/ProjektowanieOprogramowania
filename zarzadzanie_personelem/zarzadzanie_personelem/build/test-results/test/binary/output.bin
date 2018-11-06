@@ -1,1 +1,16 @@
-n20:44:29.548 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telefon length is 1 instead o 9
+î17:04:08.847 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number with plus sign, + 123 123 123, does not have 9 signs
+{17:04:08.876 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number 123abc123 has illegal signs
+s17:04:08.880 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam99 are not letters
+r17:04:08.884 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam! are not letters
+v17:04:08.886 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam adam are not letters
+s17:04:08.920 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam99 are not letters
+r17:04:08.922 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam! are not letters
+v17:04:08.925 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam adam are not letters
+m17:04:08.930 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - String a has less than 5 signs
+	î17:04:08.939 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number with plus sign, + 123 123 123, does not have 9 signs
+
+≠17:04:08.942 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - String AdamadamadamadamadamadamadamadamAdamadamadamadamadamadamadamadam has more than 20 signs
+ç17:04:08.946 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - String Adamadamadamadamadamadamadamadam has more than 20 signs
+v17:04:08.951 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - First letter of adam is not capitalized
+ò17:04:08.956 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number , 123 123 123 123, has a different size than 9, 11 or 13
+î17:04:08.960 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number with plus sign, + 123 123 123, does not have 9 signs

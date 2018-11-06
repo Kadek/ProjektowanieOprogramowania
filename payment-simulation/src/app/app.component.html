@@ -1,0 +1,12 @@
+<div class="container text-center">
+  <h1 class="jumbotron-heading">Symulacja odpowiedzi zewnętrznego serwisu na opłatę zamówienia</h1>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-lg btn-success mr-1 mt-2">
+      <input type="radio" (click)="onSubmit()" (change)="radioChangeHandler($event)" ng-model="status" value="{{status2}}" name="options" id="option1" autocomplete="off" checked> {{status2}}
+    </label>
+
+    <label class="btn btn-lg btn-danger ml-1 mt-2">
+      <input type="radio" (click)="onSubmit()" (change)="radioChangeHandler($event)" ng-model="status" value="{{status1}}" name="options" id="option1" autocomplete="off" checked> {{status1}}
+    </label>
+  </div>
+</div>

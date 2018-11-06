@@ -6,6 +6,7 @@
 package zarzadzanie_personelem.Entity;
 
 import com.google.gson.Gson;
+import java.util.HashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestTemplate;
@@ -18,21 +19,22 @@ public class EmployeeCreator {
     
     private static final Logger log = LoggerFactory.getLogger(EmployeeCreator.class);
 
-    public String createEmployee(String employeeFormJson) {
+    public String createEmployee(final String employeeFormJson, final String url) {
         EmployeeForm employeeForm = (new Gson()).fromJson(employeeFormJson, EmployeeForm.class);
         employeeForm.validate();
         if(employeeForm.isValid()){
-            return saveEmployeeToDB(employeeForm);
+            return saveEmployeeToDB(employeeForm, url);
         }else{
-            return "Invalid input";
+            return (new Gson()).toJson("Invalid input");
         }
     }
     
-    private String saveEmployeeToDB(EmployeeForm employeeForm){
-        final String uri = "http://localhost:9091/dodajPracownika";
-
+    private String saveEmployeeToDB(final EmployeeForm employeeForm, final String url){
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForObject(uri, employeeForm, String.class);      
+        String responseDB = restTemplate.postForObject(url, employeeForm, String.class);
+        HashMap<String, String> responseUser = new HashMap();
+        responseUser.put("message", responseDB);
+        return (new Gson()).toJson(responseUser);
     }   
     
 }

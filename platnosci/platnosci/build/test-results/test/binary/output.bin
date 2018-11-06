@@ -1,1 +1,2 @@
-^19:13:15.831 [Test worker] INFO platnosci.Entity.PaymentForm - No such payment method as cos
+a17:05:04.950 [Test worker] INFO platnosci.Entity.PaymentForm - No such payment method as PAYPAL
+^17:05:04.957 [Test worker] INFO platnosci.Entity.PaymentForm - No such payment method as cos

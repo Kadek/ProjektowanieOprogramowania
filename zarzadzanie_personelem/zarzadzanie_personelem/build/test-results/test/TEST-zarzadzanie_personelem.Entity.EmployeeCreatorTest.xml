@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="zarzadzanie_personelem.Entity.EmployeeCreatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-10-21T18:44:28" hostname="adas-PC" time="0.955">
+<testsuite name="zarzadzanie_personelem.Entity.EmployeeCreatorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2018-11-04T16:04:08" hostname="DESKTOP-JH3BHOM" time="0.898">
   <properties/>
-  <testcase name="testCreateEmployeeInvalid" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.939"/>
-  <testcase name="testCreateEmployeeValid" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.01"/>
-  <system-out><![CDATA[20:44:29.548 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telefon length is 1 instead o 9
+  <testcase name="testCreateEmployeeLoginMin5Signs" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.795"/>
+  <testcase name="testCreateEmployeeNameCorrect" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.009"/>
+  <testcase name="testCreateEmployeeTelephoneOnlyPhoneSigns" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.003"/>
+  <testcase name="testCreateEmployeeNameOnlyLetters" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.01"/>
+  <testcase name="testCreateEmployeeTelephoneCorrect" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.025"/>
+  <testcase name="testCreateEmployeeLastNameOnlyLetters" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.01"/>
+  <testcase name="testCreateEmployeeTelephoneWithPlusOnly11Signs" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.005"/>
+  <testcase name="testCreateEmployeeLoginMax20Signs" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.007"/>
+  <testcase name="testCreateEmployeeNameMax30Letters" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.003"/>
+  <testcase name="testCreateEmployeeNameMax20Letters" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.003"/>
+  <testcase name="testCreateEmployeeNameFirstLetterUpperCase" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.005"/>
+  <testcase name="testCreateEmployeeTelephoneOnly9or11or13Signs" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.004"/>
+  <testcase name="testCreateEmployeeLoginNormalSigns" classname="zarzadzanie_personelem.Entity.EmployeeCreatorTest" time="0.004"/>
+  <system-out><![CDATA[17:04:08.847 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number with plus sign, + 123 123 123, does not have 9 signs
+17:04:08.876 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number 123abc123 has illegal signs
+17:04:08.880 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam99 are not letters
+17:04:08.884 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam! are not letters
+17:04:08.886 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam adam are not letters
+17:04:08.920 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam99 are not letters
+17:04:08.922 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam! are not letters
+17:04:08.925 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Some signs of Adam adam are not letters
+17:04:08.930 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - String a has less than 5 signs
+17:04:08.939 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number with plus sign, + 123 123 123, does not have 9 signs
+17:04:08.942 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - String AdamadamadamadamadamadamadamadamAdamadamadamadamadamadamadamadam has more than 20 signs
+17:04:08.946 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - String Adamadamadamadamadamadamadamadam has more than 20 signs
+17:04:08.951 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - First letter of adam is not capitalized
+17:04:08.956 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number , 123 123 123 123, has a different size than 9, 11 or 13
+17:04:08.960 [Test worker] INFO zarzadzanie_personelem.Entity.EmployeeForm - Telephone number with plus sign, + 123 123 123, does not have 9 signs
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

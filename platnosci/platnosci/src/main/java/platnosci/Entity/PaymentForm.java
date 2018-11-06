@@ -16,6 +16,7 @@ class PaymentForm {
     private String id_klienta;
     private String id_zamowienia;
     private String sposób_zapłaty;
+    private String suma;
 
     public String getId_klienta() {
         return id_klienta;
@@ -27,6 +28,10 @@ class PaymentForm {
 
     public String getSposób_zapłaty() {
         return sposób_zapłaty;
+    }
+
+    public String getSuma() {
+        return suma;
     }
     
     public void validate(){
